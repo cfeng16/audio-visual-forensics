@@ -1,0 +1,6 @@
+@article{feng2023self,
+    title={Self-Supervised Video Forensics by Audio-Visual Anomaly Detection},
+    author={Feng, Chao and Chen, Ziyang and Owens, Andrew},
+    journal={arXiv},
+    year={2023},
+}

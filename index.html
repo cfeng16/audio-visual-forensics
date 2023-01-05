@@ -1,0 +1,269 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script> 
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<html>
+<head>
+    <title>Audio-Visual Forensics</title>
+    <!-- <meta property="og:image" content=images/teaser.png"/> Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
+    <meta property="og:title" content="Self-Supervised Video Forensics by Audio-Visual Anomaly Detection" />
+    <meta property="og:description" content="C. Feng, Z. Chen, A. Owens." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- webpage template-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- model-viewer css -->
+    <link rel="stylesheet" href="assets/css/demo-style.css">
+
+</head>
+
+<body>
+    <br>
+    <!-- <center> -->
+    <center>
+        <span style="font-size:36px">Self-Supervised Video Forensics by Audio-Visual Anomaly Detection</span>
+    </center>
+    <br><br>
+    <table align=center width=60%>
+        <tr>
+            <td align=center width=33%>
+                <center>
+                    <span style="font-size:20px"><a href="https://cfeng16.github.io/">Chao Feng</a></span>
+                </center>
+            </td>
+            <td align=center width=33%>
+                <center>
+                    <span style="font-size:20px"><a href="https://ificl.github.io/">Ziyang Chen</a></span>
+                </center>
+            </td>
+            <td align=center width=33%>
+                <center>
+                    <span style="font-size:20px"><a href="http://andrewowens.com/">Andrew Owens</a></span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table align=center width=60%>
+        <tr>
+            <td align=center width=100%>
+                <center>
+                    <span style="font-size:20px">University of Michigan, Ann Arbor</span>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table align=center width=60%>
+        <tr>
+            <td align=center width=100%>
+                <center>
+                    <!-- <span style="font-size:20px">CVPR 2023</span>
+                    <span style="font-size:20px">ArXiv 2023</span> -->
+                </center>
+            </td>
+        </tr>
+    </table>
+    <!-- <br> -->
+    <table align=center width=60%>
+        <tr>
+            <td align=center width=20%>
+                <center>
+                    <span style="font-size:20px"><a href="https://arxiv.org/abs/2301.01767">[Paper]</a></span>
+                </center>
+            </td>
+            <td align=center width=20%>
+                <center>
+                    <span style="font-size:20px"><a href="https://github.com/cfeng16/audio-visual-forensics">[Github]</a></span>
+                </center>
+            </td>
+            <!-- <td align=center width=20%>
+                <center>
+                    <span style="font-size:20px"><a href="">[Video]</a></span>
+                </center>
+            </td>
+            <td align=center width=20%>
+                <center>
+                    <span style="font-size:20px"><a href="">[Slides]</a></span>
+                </center>
+            </td>
+            <td align=center width=20%>
+                <center>
+                    <span style="font-size:20px"><a href="">[Poster]</a></span>
+                </center>
+            </td> -->
+        </tr>
+    </table>
+
+    <br>
+
+    <table align=center width=80%>
+        <tr>
+            <td width=100%>
+                <center>
+                    <video width="1000" autoplay loop muted playsinline id="method">
+                        <source src="images/method.mp4" type="video/mp4" />
+                    </video>
+                    <br>
+                </center>
+            </td>
+            <!--
+            <td width = 60%>
+                <center>
+                    
+                </center>
+            </td>
+            -->
+        </tr>
+    </table>
+    <br>
+    <hr>
+
+    <table align=center width=80%>
+        <center><h1>Abstract</h1></center>
+        <tr>
+            <td>
+                Manipulated videos often contain subtle inconsistencies between their visual and audio signals. We propose a video forensics method, based on anomaly detection, that can identify these inconsistencies, and that can be trained solely using real, unlabeled data. We train an autoregressive model to generate sequences of audio-visual features, using feature sets that capture the temporal synchronization between video frames and sound. At test time, we then flag videos that the model assigns low probability. Despite being trained entirely on real videos, our model obtains strong performance on the task of detecting manipulated speech videos.
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <hr>
+
+    <table align=center width=80%>
+        <center>
+            <h1>Audio-Visual Time Delay Estimation</h1>
+        </center>
+        <tr>
+            <td width=100%>
+                <center>
+                    <!--  height="480" -->
+                        <!-- <img src="images/method.png" width="100%"></img> -->
+                    <video width="500" playsinline autoplay loop muted id="time_delay_video">
+                        <source src="images/time_delay_v9.mp4" type="video/mp4" />
+                    </video>
+                    <br>
+                </center>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <hr>
+
+    <!-- talk section  -->
+    <!-- <table align=center width=100%>
+        <center>
+            <h1>Talk</h1>
+        </center>
+        <div>
+            <p align="center">
+            <iframe width="700" height="400" src="https://www.youtube.com/embed/ILI-WAp_WYM" title="YouTube video player"
+                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </p>
+        </div>
+    </table>
+    <br><br>
+    <hr> -->
+
+    <table align=center width=80%>
+        <center>
+            <h1>Qualitative Results</h1>
+        </center>
+        <tr>
+            <td width=47%>
+                <center>
+                    <h3> Time Delay Visualization </h3>
+                </center>
+            </td>
+            <td width=6%>
+                <center>
+                    <!-- <h3> </h3> -->
+                </center>
+            </td>
+            <td width=47%>
+                <center>
+                    <h3> Video Demo </h3>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td width=47%>
+                <div>
+                    <p align="center">
+                        <img src="images/visualization.png" width="100%"></img>
+                    </p>
+                </div>
+            </td>
+            <td width=6%>
+                <center>
+                    <!-- <h3> </h3> -->
+                </center>
+            </td>
+            <td width=47%>
+                <div>
+                    <p align="center">
+
+
+                        <!-- <iframe width="1193" height="671" src="https://www.youtube.com/embed/2u_ilpAR05Q" title="avforensics_visualization"
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe> -->
+
+                        <iframe style="width: 58%; height: 100%; min-height:480px"
+                            src="https://www.youtube.com/embed/2u_ilpAR05Q" title="avforensics_visualization" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <hr>
+
+    <table align=center width=60%>
+        <center><h1>Paper and Supplementary Material</h1></center>
+        <tr>
+            <td><a href=""><img class="layered-paper-big" style="height:175px" src="./images/paper_v2.png"/></a></td>
+            <td><span style="font-size:14pt">Chao Feng, Ziyang Chen, Andrew Owens.<br>
+                <b>Self-Supervised Video Forensics by Audio-Visual Anomaly Detection.</b><br>
+                arXiv 2023.
+                <br>
+                <!-- (<a href="#">Arxiv</a>)<br> -->
+                (<a href="https://arxiv.org/abs/2301.01767">ArXiv</a>)<br>
+                <span style="font-size:4pt"><a href=""><br></a>
+                </span>
+            </td>
+        </tr>
+    </table>
+    <br>
+
+    <table align=center width=60%>
+        <tr>
+            <td><span style="font-size:14pt"><center>
+                <a href="./docs/bibtex.txt">[Bibtex]</a>
+            </center></td>
+        </tr>
+    </table>
+
+    <hr>
+    <br>
+
+    <table align=center width=80%>
+        <tr>
+            <td width=80%>
+                <left>
+                    <center><h1>Acknowledgements</h1></center>
+                    <!-- This work was funded in part by DARPA Semafor and Cisco Systems. The views, opinions and/or findings expressed are those of the authors and should not be interpreted as representing the official views or policies of the Department of Defense or the U.S. Government.  -->
+                <tr>
+                    <td>
+                    We thank David Fouhey, Richard Higgins, Sarah Jabbour, Yuexi Du, Mandela Patrick, Deva Ramanan, Haochen Wang, and Aayush Bansal for helpful discussions. This work was supported in part by DARPA Semafor and Cisco Systems. The views, opinions and/or findings expressed are those of the authors and should not be interpreted as representing the official views or policies of the Department of Defense or the U.S. Government. The webpage template was originally made by <a href="http://web.mit.edu/phillipi/">Phillip Isola</a> and <a href="http://richzhang.github.io/">Richard Zhang</a> for a <a href="http://richzhang.github.io/colorization/">Colorization</a> project. 
+                    </td>
+                </tr>
+                </left>
+            </td>
+        </tr>
+    </table>
+
+<br>
+</body>
+</html>
