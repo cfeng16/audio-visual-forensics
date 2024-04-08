@@ -20,11 +20,9 @@ CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/test_video.
 CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/fake_videos.txt --device cuda:0 --max-len 50 --n_workers 4 --bs 1 --lam 0 --output_dir /home/xxx/save
 ```
 
-
+(lam is a hyperparameter you can tune to combine scores from distributions over delays and audio-visual network activations mentioned in paper method section. Default lam=0 is distributions over delays only.)
 
 - In the end, there would be a `output.log` file and a `testing_score.npy` file under output_dir generated to record scores for all the testing videos.
-
-
 
 ---
 
@@ -33,3 +31,7 @@ Audio-visual synchronization model code is based on [vit-pytorch](https://github
 Decoder only autoregressive model is partially based on [memory-compressed-attention](https://github.com/lucidrains/memory-compressed-attention)
 
 Visual encoder is heavily borrowed from [action classifiction](https://github.com/TengdaHan/ActionClassification)
+
+---
+
+Any questions please contact chfeng@umich.edu, I will try to respond ASAP, sorry any delay before. 
