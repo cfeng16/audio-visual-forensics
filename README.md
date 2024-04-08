@@ -7,15 +7,26 @@ Self-Supervised Video Forensics by Audio-Visual Anomaly Detection
 
 ---
 
-<div>✅ Forensics auto regressive model</div>
-<div>✅ Audio-visual synchronization model</div> 
-<div>[ ] Detection File</div>
+This is the code for audio-visual forensics.
+
+Steps to run the python code directly:
+
+`pip install -r requirements.txt`
+
+```python
+# 1. test a sample fake video (path of video should be full path)
+CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/test_video.mp4 --device cuda:0 --max-len 50 --n_workers 4  --bs 1 --lam 0 --output_dir /home/xxx/save 
+# 2. test a list of fake videos (path of .txt file should be full path, and list should contain full paths of testing videos)
+CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/fake_videos.txt --device cuda:0 --max-len 50 --n_workers 4 --bs 1 --lam 0 --output_dir /home/xxx/save
+```
+
+
+
+- In the end, there would be a `output.log` file and a `testing_score.npy` file under output_dir generated to record scores for all the testing videos.
+
+
 
 ---
-
-Visual encoder code is in folder backbone, audio encoder code is in audio_process.py, and audio-visual synchronization transformer code is av_sync_model.py
-
-Audio-visual synchronization model and Forensics autoregressive model checkpoint [Google Drive](https://drive.google.com/drive/folders/1Mqbjlyk3R7Ba8pktsYXVqt0kIdQ_SgMT?usp=drive_link)
 
 Audio-visual synchronization model code is based on [vit-pytorch](https://github.com/lucidrains/vit-pytorch)
 
