@@ -24,7 +24,7 @@ CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/fake_videos
 
 Audio-visual synchronization model checkpoint `sync_model.pth` can be donwloaded by this [link](https://drive.google.com/file/d/1BxaPiZmpiOJDsbbq8ZIDHJU7--RJE7Br/view?usp=sharing). Noted that AV synchronization model consists of video branch, audio branch, and audio-visual feature fusion transformer.
 
-- In the end, there would be a `output.log` file and a `testing_score.npy` file under output_dir generated to record scores for all the testing videos.
+In the end, there would be a `output.log` file and a `testing_score.npy` file under output_dir generated to record scores for all the testing videos.
 
 ---
 
@@ -36,4 +36,4 @@ Visual encoder is heavily borrowed from [action classifiction](https://github.co
 
 ---
 
-Any questions please contact chfeng@umich.edu, I will try to respond ASAP, sorry any delay before. 
+Any questions please contact chfeng@umich.edu, I will try to respond ASAP, sorry for any delay before. 
