@@ -22,7 +22,7 @@ CUDA_VISIBLE_DEVICES=8 python detect.py --test_video_path /home/xxxx/fake_videos
 
 (lam is a hyperparameter you can tune to combine scores from distributions over delays and audio-visual network activations mentioned in [paper](https://arxiv.org/pdf/2301.01767.pdf) method section. Default lam=0 is distributions over delays only.)
 
-Audio-visual synchronization model checkpoint can be donwloaded by this [link](https://drive.google.com/file/d/1BxaPiZmpiOJDsbbq8ZIDHJU7--RJE7Br/view?usp=sharing). Noted that AV synchronization model consists of video branch, audio branch, and audio-visual feature fusion transformer.
+Audio-visual synchronization model checkpoint `sync_model.pth` can be donwloaded by this [link](https://drive.google.com/file/d/1BxaPiZmpiOJDsbbq8ZIDHJU7--RJE7Br/view?usp=sharing). Noted that AV synchronization model consists of video branch, audio branch, and audio-visual feature fusion transformer.
 
 - In the end, there would be a `output.log` file and a `testing_score.npy` file under output_dir generated to record scores for all the testing videos.
 
